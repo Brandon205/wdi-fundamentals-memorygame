@@ -21,6 +21,7 @@ var cards = [
 }
 ];
 var cardsInPlay = [];
+//score is very very simple but can keep accurately up to one point
 var score = "";
 
 function checkForMatch() {
@@ -31,7 +32,7 @@ function checkForMatch() {
 	} else {
 		console.log("Sorry try again.");
 	}
-}
+};
 
 function flipCard() {
 var cardId = this.getAttribute('data-id');
@@ -53,6 +54,7 @@ if (cardsInPlay.length === 2) {
 }
 };
 
+//code to reset the board/page 
 function resetBoard() {
 	location.reload();
  }
@@ -67,6 +69,7 @@ function createBoard() {
 		document.getElementById('gameBoard').appendChild(cardElement);
 	}
 }
+
 createBoard();
  
 
